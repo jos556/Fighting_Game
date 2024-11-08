@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@types/node": "^22.9.0",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.80.6"
+  }
+}
