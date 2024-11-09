@@ -1,0 +1,22 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="swordsman-crouch">
+    <!-- 基本身體結構 - 更低的蹲下姿勢 -->
+    <path d="M70,150 L130,150 L140,220 L60,220 Z" fill="#4A4A4A" stroke="#333" stroke-width="2"/>
+    <rect x="60" y="180" width="80" height="10" fill="#8B4513"/>
+    
+    <!-- 腿部更彎曲 -->
+    <path d="M60,220 L140,220 L150,260 L130,260 L120,240 L80,240 L70,260 L50,260 Z" 
+          fill="#4A4A4A" stroke="#333" stroke-width="2"/>
+    
+    <!-- 頭部降低 -->
+    <circle cx="100" cy="130" r="30" fill="#FFE4C4"/>
+    <!-- 武士髮型 -->
+    <path d="M70,130 Q100,100 130,130" fill="none" stroke="#000" stroke-width="4"/>
+    
+    <!-- 刀 - 蹲下時更低 -->
+    <g transform="translate(0,60) rotate(-30 130 120)">
+      <path d="M130,120 L180,110" stroke="#666" stroke-width="4"/>
+      <path d="M180,110 L190,112" stroke="#666" stroke-width="2"/>
+    </g>
+  </g>
+</svg> 

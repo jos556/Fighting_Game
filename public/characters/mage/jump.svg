@@ -1,0 +1,35 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="mage-jump">
+    <!-- 法師帽 - 上揚 -->
+    <path d="M70,20 L100,0 L130,20" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+    
+    <!-- 頭部 -->
+    <circle cx="100" cy="40" r="30" fill="#FFE0BD"/>
+    
+    <!-- 長袍飄動效果 -->
+    <path d="M70,70 Q100,50 130,70 L140,220 Q100,200 60,220 Z" 
+          fill="#4169E1" stroke="#000080" stroke-width="2">
+      <animate
+        attributeName="d"
+        values="M70,70 Q100,50 130,70 L140,220 Q100,200 60,220 Z;
+                M70,70 Q100,40 130,70 L140,200 Q100,170 60,200 Z;
+                M70,70 Q100,50 130,70 L140,220 Q100,200 60,220 Z"
+        dur="0.5s"
+        repeatCount="1"
+      />
+    </path>
+    
+    <!-- 法杖 - 上揚 -->
+    <g transform="rotate(-30 169 70)">
+      <rect x="165" y="80" width="8" height="200" fill="#8B4513"/>
+      <circle cx="169" cy="70" r="15" fill="#4169E1">
+        <animate
+          attributeName="r"
+          values="15;18;15"
+          dur="0.5s"
+          repeatCount="1"
+        />
+      </circle>
+    </g>
+  </g>
+</svg> 

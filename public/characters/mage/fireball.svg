@@ -1,0 +1,59 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="fireGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g id="mage-fireball">
+    <!-- 基本姿勢 -->
+    <g>
+      <!-- 法師帽 -->
+      <path d="M70,30 L100,10 L130,30" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+      
+      <!-- 頭部 -->
+      <circle cx="100" cy="50" r="30" fill="#FFE0BD"/>
+      
+      <!-- 長袍 -->
+      <path d="M70,80 L130,80 L150,280 L50,280 Z" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+    </g>
+    
+    <!-- 施法動作 -->
+    <g>
+      <!-- 法杖 -->
+      <g transform="rotate(45 169 80)">
+        <rect x="165" y="80" width="8" height="200" fill="#8B4513"/>
+        <circle cx="169" cy="70" r="15" fill="#4169E1">
+          <animate
+            attributeName="r"
+            values="15;25;15"
+            dur="0.3s"
+            repeatCount="1"
+          />
+        </circle>
+      </g>
+      
+      <!-- 火球 -->
+      <g filter="url(#fireGlow)">
+        <circle cx="169" cy="70" r="20" fill="#FF4500">
+          <animate
+            attributeName="cx"
+            values="169;300"
+            dur="0.3s"
+            repeatCount="1"
+          />
+          <animate
+            attributeName="opacity"
+            values="1;0"
+            dur="0.3s"
+            repeatCount="1"
+          />
+        </circle>
+      </g>
+    </g>
+  </g>
+</svg> 

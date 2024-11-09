@@ -1,0 +1,161 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stars" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#000B3B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+      <animate attributeName="r" values="50%;55%;50%" dur="5s" repeatCount="indefinite"/>
+    </radialGradient>
+    
+    <!-- 星星閃爍效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#stars)"/>
+  
+  <!-- 地球 -->
+  <g>
+    <circle cx="1600" cy="300" r="200" fill="#4B9CD3">
+      <!-- 地球自轉 -->
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 1600 300"
+        to="360 1600 300"
+        dur="60s"
+        repeatCount="indefinite"
+      />
+      <!-- 地球呼吸效果 -->
+      <animate
+        attributeName="r"
+        values="200;210;200"
+        dur="4s"
+        repeatCount="indefinite"
+      />
+    </circle>
+  </g>
+  
+  <!-- 流星群 -->
+  <g>
+    <path d="M-100,100 L100,300" stroke="white" stroke-width="2">
+      <animate
+        attributeName="d"
+        values="M-100,100 L100,300;M1920,980 L2120,1180"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="opacity"
+        values="0;1;0"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+    </path>
+    <path d="M-200,200 L0,400" stroke="white" stroke-width="2">
+      <animate
+        attributeName="d"
+        values="M-200,200 L0,400;M1820,1080 L2020,1280"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="opacity"
+        values="0;1;0"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+    </path>
+  </g>
+  
+  <!-- 閃爍的星星群組1 -->
+  <g filter="url(#glow)">
+    <circle cx="300" cy="200" r="2" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="400" r="2" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;3;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1200" cy="150" r="2" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;3;1" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- 閃爍的星星群組2 -->
+  <g filter="url(#glow)">
+    <circle cx="500" cy="300" r="2" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;4;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1000" cy="200" r="2" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;4;1" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1500" cy="350" r="2" fill="white">
+      <animate attributeName="opacity" values="0;1;0" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;4;1" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- 太空站 -->
+  <g transform="translate(800,200)">
+    <!-- 主體結構 -->
+    <rect width="300" height="100" fill="#888888" stroke="#666666">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+      <!-- 太空站擺動 -->
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="-2 150 50;2 150 50;-2 150 50"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+    </rect>
+    <!-- 太陽能板 -->
+    <rect x="-100" y="20" width="80" height="20" fill="#4a90e2">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="-5 -60 30;5 -60 30;-5 -60 30"
+        dur="8s"
+        repeatCount="indefinite"
+      />
+    </rect>
+    <rect x="320" y="20" width="80" height="20" fill="#4a90e2">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="5 360 30;-5 360 30;5 360 30"
+        dur="8s"
+        repeatCount="indefinite"
+      />
+    </rect>
+  </g>
+  
+  <!-- 漂浮的太空碎片 -->
+  <g>
+    <path d="M100,100 L120,110 L110,120 Z" fill="#666">
+      <animateMotion
+        path="M0,0 C100,100 200,-100 300,0"
+        dur="20s"
+        repeatCount="indefinite"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+    </path>
+  </g>
+</svg> 

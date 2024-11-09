@@ -1,0 +1,32 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="lightningGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g id="mage-lightning">
+    <!-- 基本姿勢 -->
+    <use href="#mage-idle"/>
+    
+    <!-- 閃電特效 -->
+    <g filter="url(#lightningGlow)">
+      <path d="M169,70 L200,120 L180,140 L220,200" 
+            stroke="#FFD700" 
+            stroke-width="4" 
+            fill="none"
+            opacity="0.8">
+        <animate
+          attributeName="opacity"
+          values="0;1;0"
+          dur="0.3s"
+          repeatCount="1"
+        />
+      </path>
+    </g>
+  </g>
+</svg> 

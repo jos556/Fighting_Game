@@ -1,0 +1,32 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="karate-base">
+      <!-- 與 idle.svg 相同的頭部定義 -->
+    </g>
+  </defs>
+
+  <g id="karate-jump" transform="translate(0,-50)">
+    <!-- 道服上衣 - 稍微上揚 -->
+    <path d="M70,70 L130,70 L140,160 L60,160 Z" fill="white" stroke="#DDD" stroke-width="2"/>
+    <!-- 腰帶 -->
+    <rect x="60" y="130" width="80" height="10" fill="#000"/>
+    <!-- 道服褲子 - 彎曲的姿勢 -->
+    <path d="M60,160 L140,160 L150,220 L130,220 L120,180 L80,180 L70,220 L50,220 Z" fill="white" stroke="#DDD" stroke-width="2"/>
+    
+    <!-- 左手 - 上舉姿勢 -->
+    <g class="left-arm">
+      <path d="M70,80 L40,60" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M40,60 L30,40" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="30" cy="40" r="10" fill="#FFE0BD"/>
+    </g>
+    
+    <!-- 右手 - 上舉姿勢 -->
+    <g class="right-arm">
+      <path d="M130,80 L160,60" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M160,60 L170,40" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="170" cy="40" r="10" fill="#FFE0BD"/>
+    </g>
+
+    <use href="#karate-base"/>
+  </g>
+</svg> 

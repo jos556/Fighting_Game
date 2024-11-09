@@ -1,0 +1,41 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="judo-base">
+      <!-- 頭部 -->
+      <circle cx="100" cy="50" r="30" fill="#FFE0BD"/>
+      <!-- 頭帶 -->
+      <path d="M65,45 Q100,35 135,45" stroke="#FFFFFF" stroke-width="5" fill="none"/>
+      <!-- 眼睛 -->
+      <circle cx="85" cy="45" r="3" fill="#000"/>
+      <circle cx="115" cy="45" r="3" fill="#000"/>
+      <!-- 嘴巴 -->
+      <path d="M95,60 Q100,65 105,60" stroke="#000" stroke-width="2" fill="none"/>
+    </g>
+  </defs>
+
+  <g id="judo-stance">
+    <!-- 柔道服上衣 -->
+    <path d="M70,80 L130,80 L140,180 L60,180 Z" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="2"/>
+    <!-- 黑帶 -->
+    <rect x="60" y="140" width="80" height="10" fill="#000000"/>
+    <!-- 柔道服褲子 -->
+    <path d="M60,180 L140,180 L150,280 L130,280 L120,200 L80,200 L70,280 L50,280 Z" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="2"/>
+    
+    <!-- 左手 -->
+    <g class="left-arm">
+      <path d="M70,90 L40,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M40,130 L30,160" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="30" cy="160" r="10" fill="#FFE0BD"/>
+    </g>
+    
+    <!-- 右手 -->
+    <g class="right-arm">
+      <path d="M130,90 L160,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M160,130 L170,160" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="170" cy="160" r="10" fill="#FFE0BD"/>
+    </g>
+
+    <!-- 使用基本頭部 -->
+    <use href="#judo-base"/>
+  </g>
+</svg> 

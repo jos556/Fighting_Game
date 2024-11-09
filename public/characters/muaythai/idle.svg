@@ -1,0 +1,77 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="muaythai-base">
+      <!-- 頭部 -->
+      <circle cx="100" cy="50" r="30" fill="#FFE0BD"/>
+      <!-- 泰拳頭帶(蒙骨) -->
+      <path d="M65,45 Q100,35 135,45" stroke="#FFD700" stroke-width="8" fill="none"/>
+      <!-- 眼睛 -->
+      <circle cx="85" cy="45" r="3" fill="#000"/>
+      <circle cx="115" cy="45" r="3" fill="#000"/>
+      <!-- 嘴巴 -->
+      <path d="M95,60 Q100,65 105,60" stroke="#000" stroke-width="2" fill="none"/>
+    </g>
+  </defs>
+
+  <g id="muaythai-stance">
+    <!-- 上身 (赤裸) -->
+    <path d="M70,80 L130,80 L140,180 L60,180 Z" fill="#FFE0BD" stroke="#DEB887" stroke-width="2"/>
+    
+    <!-- 肌肉線條 -->
+    <path d="M85,100 Q100,105 115,100" stroke="#DEB887" stroke-width="2" fill="none"/>
+    <path d="M85,120 Q100,125 115,120" stroke="#DEB887" stroke-width="2" fill="none"/>
+    <path d="M85,140 Q100,145 115,140" stroke="#DEB887" stroke-width="2" fill="none"/>
+    
+    <!-- 手臂綁帶裝飾 -->
+    <!-- 左手臂綁帶 -->
+    <rect x="35" y="100" width="25" height="5" fill="#FFD700" transform="rotate(-30,35,100)"/>
+    <rect x="35" y="110" width="25" height="5" fill="#FFD700" transform="rotate(-30,35,110)"/>
+    <rect x="35" y="120" width="25" height="5" fill="#FFD700" transform="rotate(-30,35,120)"/>
+    <!-- 右手臂綁帶 -->
+    <rect x="140" y="100" width="25" height="5" fill="#FFD700" transform="rotate(30,140,100)"/>
+    <rect x="140" y="110" width="25" height="5" fill="#FFD700" transform="rotate(30,140,110)"/>
+    <rect x="140" y="120" width="25" height="5" fill="#FFD700" transform="rotate(30,140,120)"/>
+    
+    <!-- 泰拳短褲 -->
+    <path d="M60,180 L140,180 L150,240 L130,240 L120,200 L80,200 L70,240 L50,240 Z" 
+          fill="#FF0000" stroke="#8B0000" stroke-width="2"/>
+    <!-- 短褲裝飾 -->
+    <path d="M70,190 L130,190" stroke="#FFD700" stroke-width="3"/>
+    <path d="M65,200 L135,200" stroke="#FFD700" stroke-width="3"/>
+    
+    <!-- 左手 -->
+    <g class="left-arm">
+      <path d="M70,90 L40,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M40,130 L30,160" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="30" cy="160" r="10" fill="#FFE0BD"/>
+      <!-- 拳擊手綁帶 -->
+      <path d="M20,155 L40,155" stroke="#FFFFFF" stroke-width="8"/>
+      <path d="M20,160 L40,160" stroke="#FFFFFF" stroke-width="8"/>
+      <path d="M20,165 L40,165" stroke="#FFFFFF" stroke-width="8"/>
+    </g>
+    
+    <!-- 右手 -->
+    <g class="right-arm">
+      <path d="M130,90 L160,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M160,130 L170,160" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="170" cy="160" r="10" fill="#FFE0BD"/>
+      <!-- 拳擊手綁帶 -->
+      <path d="M160,155 L180,155" stroke="#FFFFFF" stroke-width="8"/>
+      <path d="M160,160 L180,160" stroke="#FFFFFF" stroke-width="8"/>
+      <path d="M160,165 L180,165" stroke="#FFFFFF" stroke-width="8"/>
+    </g>
+
+    <!-- 腿部綁帶 -->
+    <!-- 左腿綁帶 -->
+    <rect x="65" y="250" width="30" height="5" fill="#FFD700"/>
+    <rect x="65" y="260" width="30" height="5" fill="#FFD700"/>
+    <rect x="65" y="270" width="30" height="5" fill="#FFD700"/>
+    <!-- 右腿綁帶 -->
+    <rect x="105" y="250" width="30" height="5" fill="#FFD700"/>
+    <rect x="105" y="260" width="30" height="5" fill="#FFD700"/>
+    <rect x="105" y="270" width="30" height="5" fill="#FFD700"/>
+
+    <!-- 使用基本頭部 -->
+    <use href="#muaythai-base"/>
+  </g>
+</svg> 

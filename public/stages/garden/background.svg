@@ -1,0 +1,166 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB6C1;stop-opacity:1">
+        <animate attributeName="stop-color"
+          values="#FFB6C1;#FFC0CB;#FFB6C1"
+          dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#FFC0CB;stop-opacity:1">
+        <animate attributeName="stop-color"
+          values="#FFC0CB;#FFB6C1;#FFC0CB"
+          dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- 櫻花瓣漸層 -->
+    <radialGradient id="petalGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFB7C5;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:1"/>
+    </radialGradient>
+    
+    <!-- 櫻花瓣符號 -->
+    <symbol id="petal" viewBox="0 0 20 20">
+      <path d="M10,0 C15,5 15,15 10,20 C5,15 5,5 10,0" fill="url(#petalGradient)"/>
+    </symbol>
+  </defs>
+  
+  <!-- 天空 -->
+  <rect width="100%" height="100%" fill="url(#skyGradient)"/>
+  
+  <!-- 遠景山脈 -->
+  <path d="M0,300 Q480,200 960,300 T1920,300 L1920,1080 L0,1080 Z" 
+    fill="#8B4513" opacity="0.6">
+    <animate attributeName="opacity"
+      values="0.6;0.7;0.6"
+      dur="10s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- 櫻花樹群組 -->
+  <g id="tree" transform="translate(200,200)">
+    <!-- 樹幹 -->
+    <path d="M80,400 L120,400 L100,100 Z" fill="#8B4513">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="-3 100 400;3 100 400;-3 100 400"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+    </path>
+    
+    <!-- 樹冠 -->
+    <g fill="url(#petalGradient)">
+      <circle cx="100" cy="100" r="80">
+        <animate attributeName="r"
+          values="80;85;80"
+          dur="4s" repeatCount="indefinite"/>
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          values="-2 100 100;2 100 100;-2 100 100"
+          dur="5s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="50" cy="150" r="60">
+        <animate attributeName="r"
+          values="60;65;60"
+          dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="150" cy="150" r="60">
+        <animate attributeName="r"
+          values="60;65;60"
+          dur="4.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- 複製樹木 -->
+  <use href="#tree" x="600" y="0">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0,0;5,0;0,0"
+      dur="6s"
+      repeatCount="indefinite"
+    />
+  </use>
+  <use href="#tree" x="1200" y="0">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0,0;-5,0;0,0"
+      dur="7s"
+      repeatCount="indefinite"
+    />
+  </use>
+  
+  <!-- 飄落的櫻花瓣群組1 -->
+  <g>
+    <use href="#petal" x="300" y="0" width="20" height="20">
+      <animateMotion
+        path="M0,0 C50,100 -50,200 0,300"
+        dur="6s"
+        repeatCount="indefinite"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="6s"
+        repeatCount="indefinite"
+      />
+    </use>
+    <use href="#petal" x="800" y="50" width="20" height="20">
+      <animateMotion
+        path="M0,0 C-50,100 50,200 0,300"
+        dur="7s"
+        repeatCount="indefinite"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="-360"
+        dur="7s"
+        repeatCount="indefinite"
+      />
+    </use>
+  </g>
+  
+  <!-- 飄落的櫻花瓣群組2 -->
+  <g>
+    <use href="#petal" x="500" y="100" width="20" height="20">
+      <animateMotion
+        path="M0,0 C30,100 -30,200 0,300"
+        dur="8s"
+        repeatCount="indefinite"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="720"
+        dur="8s"
+        repeatCount="indefinite"
+      />
+    </use>
+    <use href="#petal" x="1200" y="150" width="20" height="20">
+      <animateMotion
+        path="M0,0 C-30,100 30,200 0,300"
+        dur="9s"
+        repeatCount="indefinite"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="-720"
+        dur="9s"
+        repeatCount="indefinite"
+      />
+    </use>
+  </g>
+</svg> 

@@ -1,0 +1,19 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="mage-crouch">
+    <!-- 法師帽 - 降低位置 -->
+    <path d="M70,60 L100,40 L130,60" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+    
+    <!-- 頭部 - 降低位置 -->
+    <circle cx="100" cy="80" r="30" fill="#FFE0BD"/>
+    
+    <!-- 長袍 - 壓縮效果 -->
+    <path d="M70,110 L130,110 L150,280 L50,280 Z" 
+          fill="#4169E1" stroke="#000080" stroke-width="2"/>
+    
+    <!-- 法杖 - 降低位置 -->
+    <g transform="translate(0,30)">
+      <rect x="165" y="80" width="8" height="200" fill="#8B4513"/>
+      <circle cx="169" cy="70" r="15" fill="#4169E1"/>
+    </g>
+  </g>
+</svg> 

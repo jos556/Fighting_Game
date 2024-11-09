@@ -1,0 +1,68 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="magicBlast">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <g id="mage-kick">
+    <!-- 基本姿勢 -->
+    <g transform="rotate(10 100 150)">
+      <!-- 法師帽 -->
+      <path d="M70,30 L100,10 L130,30" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+      
+      <!-- 頭部 -->
+      <circle cx="100" cy="50" r="30" fill="#FFE0BD"/>
+      
+      <!-- 長袍 -->
+      <path d="M70,80 L130,80 L150,280 L50,280 Z" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+      
+      <!-- 法杖揮擊 -->
+      <g filter="url(#magicBlast)">
+        <rect x="165" y="80" width="8" height="150" fill="#8B4513">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="0 165 80;45 165 80;0 165 80"
+            dur="0.3s"
+            repeatCount="1"
+          />
+        </rect>
+        <circle cx="169" cy="70" r="15" fill="#4169E1">
+          <animate
+            attributeName="r"
+            values="15;20;15"
+            dur="0.3s"
+            repeatCount="1"
+          />
+        </circle>
+        
+        <!-- 近距離魔法波動 -->
+        <path d="M169,70 Q189,70 209,70" 
+              stroke="#4169E1" 
+              stroke-width="10" 
+              fill="none"
+              opacity="0.6">
+          <animate
+            attributeName="d"
+            values="M169,70 Q189,70 209,70;
+                    M169,70 Q189,90 209,70;
+                    M169,70 Q189,70 209,70"
+            dur="0.3s"
+            repeatCount="1"
+          />
+          <animate
+            attributeName="opacity"
+            values="0.6;1;0"
+            dur="0.3s"
+            repeatCount="1"
+          />
+        </path>
+      </g>
+    </g>
+  </g>
+</svg> 

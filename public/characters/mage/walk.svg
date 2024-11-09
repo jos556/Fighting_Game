@@ -1,0 +1,48 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="mage-walk">
+    <!-- 基本結構與 idle 相同 -->
+    <g>
+      <!-- 法師帽 -->
+      <path d="M70,30 L100,10 L130,30" fill="#4169E1" stroke="#000080" stroke-width="2"/>
+      
+      <!-- 頭部 -->
+      <circle cx="100" cy="50" r="30" fill="#FFE0BD"/>
+      
+      <!-- 長袍 -->
+      <path d="M70,80 L130,80 L150,280 L50,280 Z" fill="#4169E1" stroke="#000080" stroke-width="2">
+        <animate
+          attributeName="d"
+          values="M70,80 L130,80 L150,280 L50,280 Z;
+                  M70,80 L130,80 L140,280 L60,280 Z;
+                  M70,80 L130,80 L150,280 L50,280 Z"
+          dur="0.5s"
+          repeatCount="indefinite"
+        />
+      </path>
+      
+      <!-- 法杖 -->
+      <g>
+        <rect x="165" y="80" width="8" height="200" fill="#8B4513">
+          <animate
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            values="0 169 80; 5 169 80; 0 169 80"
+            dur="0.5s"
+            repeatCount="indefinite"
+          />
+        </rect>
+        <circle cx="169" cy="70" r="15" fill="#4169E1"/>
+      </g>
+    </g>
+    
+    <!-- 行走動畫 -->
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0,0; 0,-5; 0,0"
+      dur="0.5s"
+      repeatCount="indefinite"
+    />
+  </g>
+</svg> 

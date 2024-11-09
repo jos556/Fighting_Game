@@ -1,0 +1,145 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.confirmButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.confirmButton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.characterGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.characterCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.characterCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.selectedP1 {
+  border-color: #4a90e2;
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+.selectedP2 {
+  border-color: #e24a4a;
+  box-shadow: 0 0 15px rgba(226, 74, 74, 0.5);
+}
+
+.characterImage {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.characterSprite {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.characterCard:hover .characterSprite {
+  transform: scale(1.1);
+}
+
+.characterInfo {
+  color: #fff;
+}
+
+.characterInfo h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.characterInfo p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.selectedP1::after {
+  content: '玩家1';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #4a90e2;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.selectedP2::after {
+  content: 'AI玩家';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  background: #e24a4a;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}

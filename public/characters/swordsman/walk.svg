@@ -1,0 +1,16 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="swordsman-walk">
+    <!-- 基本身體結構與 idle 相同 -->
+    <use href="#swordsman-idle" />
+    
+    <!-- 行走動畫 -->
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="translate"
+      values="0,0; -2,0; 0,0; 2,0; 0,0"
+      dur="0.5s"
+      repeatCount="indefinite"
+    />
+  </g>
+</svg> 

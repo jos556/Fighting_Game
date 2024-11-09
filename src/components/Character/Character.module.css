@@ -1,0 +1,141 @@
+.character {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  transition: transform 0.1s ease;
+}
+
+.characterSprite {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 動畫狀態 */
+.idle {
+  animation: idle 1s infinite ease-in-out;
+}
+
+.walk {
+  animation: walk 0.5s infinite steps(8);
+}
+
+.jump {
+  animation: jumpAnim 0.5s ease-out forwards;
+}
+
+.fall {
+  animation: fallAnim 0.3s ease-in forwards;
+}
+
+.crouch {
+  animation: crouchAnim 0.2s ease-out forwards;
+}
+
+.crouchWalk {
+  transform: scale(1, 0.7);
+  transform-origin: bottom;
+  animation: walk 0.7s infinite steps(8);
+}
+
+/* 攻擊動畫 */
+.punch {
+  animation: punchAnim 0.3s ease-out forwards;
+}
+
+.kick {
+  animation: kickAnim 0.4s ease-out forwards;
+}
+
+.special {
+  animation: specialAnim 0.8s ease-out forwards;
+}
+
+/* 動畫關鍵幀 */
+@keyframes idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes walk {
+  0% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  100% { transform: translateX(-2px); }
+}
+
+@keyframes jumpAnim {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-100px) scale(0.95, 1.05); }
+  100% { transform: translateY(-150px) scale(1); }
+}
+
+@keyframes fallAnim {
+  0% { transform: translateY(-150px) scale(1); }
+  100% { transform: translateY(0) scale(1.05, 0.95); }
+}
+
+@keyframes crouchAnim {
+  0% { transform: scaleY(1); }
+  100% { transform: scaleY(0.7); }
+}
+
+/* 攻擊動畫關鍵幀 */
+@keyframes punchAnim {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes kickAnim {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(40px) rotate(10deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes specialAnim {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.2); filter: brightness(1.5); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* 確保動畫結束後保持最後一幀 */
+.punch, .kick, .special {
+  animation-fill-mode: forwards;
+}
+
+/* 添加法師特定的動畫 */
+.mage-walk {
+  animation: mageWalk 0.6s steps(8) infinite;
+}
+
+.mage-jump {
+  animation: mageJump 0.5s ease-out forwards;
+}
+
+.mage-fireball {
+  animation: mageCast 0.3s ease-out forwards;
+}
+
+@keyframes mageWalk {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes mageJump {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-100px) scale(0.95, 1.05); }
+  100% { transform: translateY(-150px) scale(1); }
+}
+
+@keyframes mageCast {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1) rotate(5deg); }
+  100% { transform: scale(1); }
+} 

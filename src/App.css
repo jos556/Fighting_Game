@@ -6,6 +6,7 @@
   align-items: center;
   background-color: #1a1a1a;
   color: white;
+  overflow: hidden;
 }
 
 .game-container {

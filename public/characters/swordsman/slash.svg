@@ -1,0 +1,30 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="swordsman-slash">
+    <!-- 基本身體結構與 idle 相同 -->
+    <use href="#swordsman-idle" />
+    
+    <!-- 刀光效果 -->
+    <path d="M130,120 Q180,90 230,110" 
+          fill="none" 
+          stroke="#FFF" 
+          stroke-width="2" 
+          opacity="0.8">
+      <animate
+        attributeName="opacity"
+        values="0;0.8;0"
+        dur="0.2s"
+        repeatCount="1"
+      />
+    </path>
+    
+    <!-- 揮刀動畫 -->
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      values="0 100 150; 30 100 150; 0 100 150"
+      dur="0.2s"
+      repeatCount="1"
+    />
+  </g>
+</svg> 

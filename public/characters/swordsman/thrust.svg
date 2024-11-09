@@ -1,0 +1,38 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="swordsman-thrust">
+    <!-- 基本身體結構 -->
+    <path d="M70,80 L130,80 L140,180 L60,180 Z" fill="#4A4A4A" stroke="#333" stroke-width="2"/>
+    <rect x="60" y="140" width="80" height="10" fill="#8B4513"/>
+    
+    <!-- 腿部 - 踢腿姿勢 -->
+    <path d="M60,180 L140,180 L180,220 L160,240 L120,200 L80,200 L70,240 L50,240 Z" 
+          fill="#4A4A4A" stroke="#333" stroke-width="2">
+      <animate 
+        attributeName="d" 
+        values="M60,180 L140,180 L150,240 L130,240 L120,200 L80,200 L70,240 L50,240 Z;
+                M60,180 L140,180 L180,220 L160,240 L120,200 L80,200 L70,240 L50,240 Z;
+                M60,180 L140,180 L150,240 L130,240 L120,200 L80,200 L70,240 L50,240 Z"
+        dur="0.3s"
+        repeatCount="1"
+      />
+    </path>
+    
+    <!-- 頭部 -->
+    <circle cx="100" cy="60" r="30" fill="#FFE4C4"/>
+    <!-- 武士髮型 -->
+    <path d="M70,60 Q100,30 130,60" fill="none" stroke="#000" stroke-width="4"/>
+    
+    <!-- 刀 - 踢腿時揮舞 -->
+    <g>
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="0 100 100;45 100 100;0 100 100"
+        dur="0.3s"
+        repeatCount="1"
+      />
+      <path d="M130,120 L180,110" stroke="#666" stroke-width="4"/>
+      <path d="M180,110 L190,112" stroke="#666" stroke-width="2"/>
+    </g>
+  </g>
+</svg> 

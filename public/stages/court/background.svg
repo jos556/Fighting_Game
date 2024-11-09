@@ -1,0 +1,163 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1">
+        <animate attributeName="stop-color"
+          values="#1E90FF;#4169E1;#1E90FF"
+          dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#4169E1;stop-opacity:1">
+        <animate attributeName="stop-color"
+          values="#4169E1;#1E90FF;#4169E1"
+          dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- 觀眾動畫圖案 -->
+    <pattern id="crowdPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <g>
+        <circle cx="30" cy="30" r="20" fill="#808080">
+          <animate attributeName="cy"
+            values="30;28;30"
+            dur="0.8s"
+            repeatCount="indefinite"/>
+          <animate attributeName="r"
+            values="20;22;20"
+            dur="0.8s"
+            repeatCount="indefinite"/>
+        </circle>
+        <circle cx="25" cy="25" r="5" fill="#D3D3D3"/>
+      </g>
+    </pattern>
+    
+    <!-- 場地光影效果 -->
+    <radialGradient id="courtGlow">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0.2">
+        <animate attributeName="stop-opacity"
+          values="0.2;0.3;0.2"
+          dur="3s"
+          repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:white;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- 天空 -->
+  <rect width="100%" height="100%" fill="url(#skyGradient)"/>
+  
+  <!-- 動態觀眾 -->
+  <rect x="0" y="0" width="1920" height="400" fill="url(#crowdPattern)">
+    <animate attributeName="y"
+      values="0;-5;0"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- 籃球場 -->
+  <g transform="translate(0,400)">
+    <!-- 主要場地 -->
+    <rect width="1920" height="680" fill="#FF7F50"/>
+    
+    <!-- 場地光影效果 -->
+    <circle cx="960" cy="340" r="400" fill="url(#courtGlow)">
+      <animate attributeName="r"
+        values="400;420;400"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- 球場線條 -->
+    <g stroke="#FFFFFF" stroke-width="5" fill="none">
+      <!-- 中場線 -->
+      <line x1="960" y1="0" x2="960" y2="680">
+        <animate attributeName="stroke-opacity"
+          values="1;0.8;1"
+          dur="2s"
+          repeatCount="indefinite"/>
+      </line>
+      
+      <!-- 三分線 -->
+      <path d="M200,0 A400,400 0 0,1 200,680">
+        <animate attributeName="stroke-opacity"
+          values="1;0.8;1"
+          dur="2.5s"
+          repeatCount="indefinite"/>
+      </path>
+      <path d="M1720,0 A400,400 0 0,0 1720,680">
+        <animate attributeName="stroke-opacity"
+          values="1;0.8;1"
+          dur="2.5s"
+          repeatCount="indefinite"/>
+      </path>
+      
+      <!-- 罰球區 -->
+      <rect x="100" y="240" width="200" height="200">
+        <animate attributeName="stroke-opacity"
+          values="1;0.8;1"
+          dur="3s"
+          repeatCount="indefinite"/>
+      </rect>
+      <rect x="1620" y="240" width="200" height="200">
+        <animate attributeName="stroke-opacity"
+          values="1;0.8;1"
+          dur="3s"
+          repeatCount="indefinite"/>
+      </rect>
+    </g>
+    
+    <!-- 籃框 -->
+    <g>
+      <!-- 左籃框 -->
+      <g transform="translate(50,290)">
+        <rect width="10" height="100" fill="#C0C0C0">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="-2 5 50;2 5 50;-2 5 50"
+            dur="2s"
+            repeatCount="indefinite"/>
+        </rect>
+        <rect x="-30" y="50" width="30" height="2" fill="#FF4500">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="-1 0 1;1 0 1;-1 0 1"
+            dur="1s"
+            repeatCount="indefinite"/>
+        </rect>
+      </g>
+      
+      <!-- 右籃框 -->
+      <g transform="translate(1860,290)">
+        <rect width="10" height="100" fill="#C0C0C0">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="-2 5 50;2 5 50;-2 5 50"
+            dur="2s"
+            repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="50" width="30" height="2" fill="#FF4500">
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="-1 0 1;1 0 1;-1 0 1"
+            dur="1s"
+            repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 飄動的旗幟 -->
+  <g transform="translate(100,100)">
+    <path d="M0,0 Q25,-10 50,0 T100,0" stroke="#FFD700" fill="none" stroke-width="3">
+      <animate attributeName="d"
+        values="M0,0 Q25,-10 50,0 T100,0;
+                M0,0 Q25,10 50,0 T100,0;
+                M0,0 Q25,-10 50,0 T100,0"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg> 

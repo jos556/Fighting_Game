@@ -1,0 +1,28 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g id="swordsman-idle">
+    <!-- 身體 -->
+    <path d="M70,80 L130,80 L140,180 L60,180 Z" fill="#4A4A4A" stroke="#333" stroke-width="2"/>
+    <!-- 腰帶 -->
+    <rect x="60" y="140" width="80" height="10" fill="#8B4513"/>
+    <!-- 腿部 -->
+    <path d="M60,180 L140,180 L150,280 L130,280 L120,200 L80,200 L70,280 L50,280 Z" 
+          fill="#4A4A4A" stroke="#333" stroke-width="2"/>
+    <!-- 頭部 -->
+    <circle cx="100" cy="60" r="30" fill="#FFE4C4"/>
+    <!-- 武士髮型 -->
+    <path d="M70,60 Q100,30 130,60" fill="none" stroke="#000" stroke-width="4"/>
+    <!-- 刀 -->
+    <path d="M130,120 L180,110" stroke="#666" stroke-width="4"/>
+    <path d="M180,110 L190,112" stroke="#666" stroke-width="2"/>
+    
+    <!-- 呼吸動畫 -->
+    <animate 
+      attributeName="transform"
+      attributeType="XML"
+      type="translate"
+      values="0,0; 0,-2; 0,0"
+      dur="1s"
+      repeatCount="indefinite"
+    />
+  </g>
+</svg> 

@@ -1,0 +1,32 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="karate-base">
+      <!-- 與 idle.svg 相同的頭部定義 -->
+    </g>
+  </defs>
+
+  <g id="karate-crouch" transform="translate(0,100)">
+    <!-- 道服上衣 - 壓縮狀態 -->
+    <path d="M70,80 L130,80 L135,130 L65,130 Z" fill="white" stroke="#DDD" stroke-width="2"/>
+    <!-- 腰帶 -->
+    <rect x="65" y="115" width="70" height="8" fill="#000"/>
+    <!-- 道服褲子 - 蹲下姿勢 -->
+    <path d="M65,130 L135,130 L145,180 L125,180 L115,150 L85,150 L75,180 L55,180 Z" fill="white" stroke="#DDD" stroke-width="2"/>
+    
+    <!-- 左手 - 防禦姿勢 -->
+    <g class="left-arm">
+      <path d="M70,90 L50,110" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M50,110 L40,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="40" cy="130" r="10" fill="#FFE0BD"/>
+    </g>
+    
+    <!-- 右手 - 防禦姿勢 -->
+    <g class="right-arm">
+      <path d="M130,90 L150,110" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M150,110 L160,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="160" cy="130" r="10" fill="#FFE0BD"/>
+    </g>
+
+    <use href="#karate-base"/>
+  </g>
+</svg> 

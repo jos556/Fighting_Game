@@ -1,0 +1,60 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="kungfu-base">
+      <!-- 頭部 -->
+      <circle cx="100" cy="50" r="30" fill="#FFE0BD"/>
+      <!-- 辮子 -->
+      <path d="M130,50 Q140,70 130,90" stroke="#000" stroke-width="4" fill="none"/>
+      <!-- 眼睛 -->
+      <circle cx="85" cy="45" r="3" fill="#000"/>
+      <circle cx="115" cy="45" r="3" fill="#000"/>
+      <!-- 嘴巴 -->
+      <path d="M95,60 Q100,65 105,60" stroke="#000" stroke-width="2" fill="none"/>
+      <!-- 頭帶 -->
+      <path d="M70,40 Q100,35 130,40" stroke="#FF0000" stroke-width="5" fill="none"/>
+    </g>
+  </defs>
+
+  <g id="kungfu-stance">
+    <!-- 中國功夫服裝 -->
+    <!-- 上衣 -->
+    <path d="M70,80 L130,80 L140,180 L60,180 Z" fill="#FF0000" stroke="#8B0000" stroke-width="2"/>
+    <!-- 盤扣裝飾 -->
+    <path d="M85,90 L115,90" stroke="#FFD700" stroke-width="2"/>
+    <path d="M85,110 L115,110" stroke="#FFD700" stroke-width="2"/>
+    <path d="M85,130 L115,130" stroke="#FFD700" stroke-width="2"/>
+    <!-- 腰帶 -->
+    <rect x="60" y="140" width="80" height="10" fill="#000000"/>
+    <!-- 功夫褲 -->
+    <path d="M60,180 L140,180 L150,280 L130,280 L120,200 L80,200 L70,280 L50,280 Z" 
+          fill="#000000" stroke="#000000" stroke-width="2"/>
+    <!-- 腳踝束帶 -->
+    <rect x="65" y="260" width="20" height="5" fill="#FFD700"/>
+    <rect x="115" y="260" width="20" height="5" fill="#FFD700"/>
+    
+    <!-- 左手 -->
+    <g class="left-arm">
+      <!-- 手臂 -->
+      <path d="M70,90 L40,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M40,130 L30,160" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <!-- 手掌 -->
+      <circle cx="30" cy="160" r="10" fill="#FFE0BD"/>
+      <!-- 功夫袖口 -->
+      <path d="M45,120 C35,125 35,135 45,140" stroke="#8B0000" stroke-width="3" fill="none"/>
+    </g>
+    
+    <!-- 右手 -->
+    <g class="right-arm">
+      <!-- 手臂 -->
+      <path d="M130,90 L160,130" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <path d="M160,130 L170,160" stroke="#FFE0BD" stroke-width="20" stroke-linecap="round"/>
+      <!-- 手掌 -->
+      <circle cx="170" cy="160" r="10" fill="#FFE0BD"/>
+      <!-- 功夫袖口 -->
+      <path d="M155,120 C165,125 165,135 155,140" stroke="#8B0000" stroke-width="3" fill="none"/>
+    </g>
+
+    <!-- 使用基本頭部 -->
+    <use href="#kungfu-base"/>
+  </g>
+</svg> 
